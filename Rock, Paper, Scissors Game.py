@@ -1,6 +1,6 @@
-#Rock, Paper, Scissors Game
 import random
 
+# Imaages for rock, paper, and scissors
 rock = '''
     _______
 ---'   ____)
@@ -27,20 +27,24 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+# List of game images
 game_images = [rock, paper, scissors]
 
+# Asking user for their choice
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissiors.\n"))
 
+# Checking if the user's choice is valid
 if user_choice >= 3 or user_choice  <0:
     print("You typed an invalid number, you lose!")
 else:
     print(game_images[user_choice])
 
-
+    # Generating commputer's choice
     computer_choice = random.randint(0,2)
     print("Computer chose:")
     print(game_images[computer_choice])
 
+    # Determining the winner
     if user_choice == 0 and computer_choice == 2:
         print("You win!")
     elif computer_choice == 0 and user_choice == 2:
